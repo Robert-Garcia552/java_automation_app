@@ -18,7 +18,6 @@ public class RepoTabTests extends BaseTestClass {
 
     @Test
     void repoCountIsCorrect() {
-
         // Act
         driver.findElement(By.partialLinkText("Repositories")).click();
         List<WebElement> repoListElements = driver.findElements(By.cssSelector("#user-repositories-list > ul > li"));
@@ -27,5 +26,4 @@ public class RepoTabTests extends BaseTestClass {
         // Assert
         assertEquals(count.getText(), String.valueOf(repoListElements.size()));
     }
-
 }
